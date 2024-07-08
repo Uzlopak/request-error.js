@@ -9,10 +9,10 @@
   "description": "Error class for Octokit request errors",
   "scripts": {
     "build": "node scripts/build.mjs && tsc -p tsconfig.json",
-    "lint": "prettier --check '{src,test}/**/*' README.md package.json",
-    "lint:fix": "prettier --write '{src,test}/**/*' README.md package.json",
+    "lint": "prettier --check '{src,test}/**/*' README.md package.json vite.config.js",
+    "lint:fix": "prettier --write '{src,test}/**/*' README.md package.json vite.config.js",
     "pretest": "npm run -s lint",
-    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest --coverage"
+    "test": "vitest run --coverage"
   },
   "repository": "github:octokit/request-error.js",
   "keywords": [
@@ -30,12 +30,13 @@
     "@octokit/tsconfig": "^3.0.0",
     "@types/jest": "^29.0.0",
     "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.6.0",
     "esbuild": "^0.23.0",
     "glob": "^10.2.6",
-    "jest": "^29.0.0",
     "prettier": "3.3.2",
     "ts-jest": "^29.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.0"
   },
   "jest": {
     "extensionsToTreatAsEsm": [
